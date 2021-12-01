@@ -1,7 +1,13 @@
 version: "3.3"
 services:
+  web:
+    build: ./todo-app/
+    ports:
+      - "9002:80"
+    depends_on:
+      - api
   api:
-    build: ./
+    build: ./todo-api/
     ports:
       - "9001:9000"
     environment:
