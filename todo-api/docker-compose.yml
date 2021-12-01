@@ -5,13 +5,13 @@ services:
     ports:
       - "9000:80"
     environment:
-      - DATABASE_SERVER: "sqlserver"
-      - DATABASE_AUTHENTICATION_TYPE: "default"
-      - DATABASE_AUTHENTICATION_USERNAME: "sa"
-      - DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
-      - DATABASE_OPTION_DATABASE: "Todos"
-      - API_PORT: "9000"
-      - SERVER_TAG: "api"
+      DATABASE_SERVER: "sqlserver"
+      DATABASE_AUTHENTICATION_TYPE: "default"
+      DATABASE_AUTHENTICATION_USERNAME: "sa"
+      DATABASE_AUTHENTICATION_PASSWORD: "Channel123*"
+      DATABASE_OPTION_DATABASE: "Todos"
+      API_PORT: "9000"
+      SERVER_TAG: "api"
   todosdb:
     image: "mcr.microsoft.com/mssql/server"
     user: "0:0"
