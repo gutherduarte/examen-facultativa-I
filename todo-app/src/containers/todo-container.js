@@ -3,6 +3,8 @@ import { TodoForm } from "./../components/todo-form";
 import { TodoList } from "./../components/todo-list";
 import { useInputField } from "../hooks/useInputField";
 
+console.log(process.env.REACT_APP_API_URL);
+
 const API_URL = `${process.env.REACT_APP_API_URL}`;
 
 console.log("Conectados a: ", API_URL);
