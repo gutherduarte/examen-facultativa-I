@@ -1,5 +1,7 @@
 FROM node:16.8.0 AS builder
 
+ARG URL
+
 WORKDIR /usr/src/app/
 
 COPY package*.json ./
@@ -8,9 +10,7 @@ RUN npm install
 
 COPY ./ ./
 
-ENV REACT_APP_API_URL = 0
-
-RUN npm run build
+RUN REACT_APP_API_URL=${URL} npm run build
 
 FROM nginx:alpine
 
