@@ -8,6 +8,8 @@ RUN npm install
 
 COPY ./ ./
 
+ENV REACT_APP_API_URL = 0
+
 RUN npm run build
 
 FROM nginx:alpine
