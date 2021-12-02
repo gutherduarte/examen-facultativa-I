@@ -1,9 +1,87 @@
 version: "3.3"
 services:
-  web:
+  web-balancer:
+    build: ./../app-loadbalancer/
+    ports:
+      - "8000:80"
+    depends_on:
+      - web1
+      - web2
+      - web3
+      - web4
+      - web5
+      - web6
+      - web7
+      - web8
+      - web9
+      - web10
+  web1:
     build:
-      context: ./todo-app/
+      context: ./
       args:
         - URL="urldeappi"
     ports:
-      - "9002:80"
+      - "8001:80"
+  web2:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8002:80"
+  web3:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8003:80"
+  web4:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8004:80"
+  web5:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8005:80"
+  web6:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8006:80"
+  web7:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8007:80"
+  web8:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8008:80"
+  web9:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8009:80"
+  web10:
+    build:
+      context: ./
+      args:
+        - URL="urldeappi"
+    ports:
+      - "8010:80"
