@@ -1,14 +1,5 @@
 version: "3.3"
 services:
-  web:
-    build:
-      context: ./todo-app/
-      args:
-        - URL="urldeappi"
-    ports:
-      - "9002:80"
-    depends_on:
-      - api
   api:
     build: ./todo-api/
     ports:
