@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:16.8.0 AS builder
 
 ARG URL
 
